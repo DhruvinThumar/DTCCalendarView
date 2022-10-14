@@ -1,6 +1,7 @@
 # DTCCalendarView
 
 Android Style MaterialDatepicker.
+Locale Support.
 
 ## Screenshots
 
