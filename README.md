@@ -42,3 +42,6 @@ cView.dotColor = UIColor.systemGreen
 cView.setUpView()
 self.view.addSubview(cView)
 ```
+
+## License
+MIT license
