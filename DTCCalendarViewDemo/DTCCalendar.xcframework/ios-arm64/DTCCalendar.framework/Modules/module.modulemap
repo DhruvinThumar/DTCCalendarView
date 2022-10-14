@@ -1,0 +1,11 @@
+framework module DTCCalendar {
+  umbrella header "DTCCalendar.h"
+
+  export *
+  module * { export * }
+}
+
+module DTCCalendar.Swift {
+    header "DTCCalendar-Swift.h"
+    requires objc
+}

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DTCCalendarViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivj-uo-mhC">
+                                <rect key="frame" x="107" y="99" width="200" height="31"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.23137254900000001" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="1jT-KF-Jjp"/>
+                                    <constraint firstAttribute="height" constant="31" id="ztj-w0-sNd"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Show Calendar">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="calendarTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OJ1-vb-akM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4UH-ce-jGH">
+                                <rect key="frame" x="107" y="210" width="200" height="31"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.23137254900000001" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="HpX-b9-Ch7"/>
+                                    <constraint firstAttribute="height" constant="31" id="ks5-1v-T9I"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Show Arabic">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="arabicCalendarTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C0N-dI-PlR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noH-0a-mvO">
+                                <rect key="frame" x="117" y="341" width="180" height="50"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="5Pl-Rx-fKr"/>
+                                    <constraint firstAttribute="width" constant="180" id="jvc-82-PGL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="noH-0a-mvO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LIP-kZ-aUG"/>
+                            <constraint firstItem="ivj-uo-mhC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="VaC-Z4-Ibd"/>
+                            <constraint firstItem="noH-0a-mvO" firstAttribute="top" secondItem="4UH-ce-jGH" secondAttribute="bottom" constant="100" id="VvB-fs-7ZL"/>
+                            <constraint firstItem="4UH-ce-jGH" firstAttribute="top" secondItem="ivj-uo-mhC" secondAttribute="bottom" constant="80" id="qku-9g-pWt"/>
+                            <constraint firstItem="ivj-uo-mhC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vW1-W1-cus"/>
+                            <constraint firstItem="4UH-ce-jGH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vkR-UB-E2b"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="selectedDatelbl" destination="noH-0a-mvO" id="Mfc-zP-dj7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="116"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

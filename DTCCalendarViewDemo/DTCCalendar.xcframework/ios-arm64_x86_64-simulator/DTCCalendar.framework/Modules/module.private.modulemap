@@ -1,0 +1,20 @@
+framework module DTCCalendar_Private {
+    header "DTCalendar.h"
+    header "DTCalendarAppearance.h"
+    header "DTCalendarCalculator.h"
+    header "DTCalendarCell.h"
+    header "DTCalendarCollectionView.h"
+    header "DTCalendarCollectionViewLayout.h"
+    header "DTCalendarConstants.h"
+    header "DTCalendarDelegationFactory.h"
+    header "DTCalendarDelegationProxy.h"
+    header "DTCalendarDynamicHeader.h"
+    header "DTCalendarExtensions.h"
+    header "DTCalendarHeaderView.h"
+    header "DTCalendarSeparatorDecorationView.h"
+    header "DTCalendarStickyHeader.h"
+    header "DTCalendarTransitionCoordinator.h"
+    header "DTCalendarWeekdayView.h"
+
+    export *
+}

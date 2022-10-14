@@ -1,0 +1,52 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name DTCCalendar
+@_exported import DTCCalendar
+import DTCCalendar_Private
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+@objc public protocol DTCalendarActionDelegate {
+  @objc func cancelTapped()
+  @objc func okTapped(selectedDate: Foundation.Date?, selectedDates: [Foundation.Date]?)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class OpenCalendarView : UIKit.UIView, DTCCalendar_Private.DTCalendarDelegate, DTCCalendar_Private.DTCalendarDataSource, UIKit.UIPickerViewDelegate, UIKit.UIPickerViewDataSource {
+  @_Concurrency.MainActor(unsafe) public var themeColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public var headerTextColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public var cancelTxtColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public var dotColor: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public var startDate: Foundation.Date!
+  @_Concurrency.MainActor(unsafe) public var endDate: Foundation.Date!
+  @_Concurrency.MainActor(unsafe) public var calendar: DTCCalendar_Private.DTCalendar!
+  @_Concurrency.MainActor(unsafe) public var eventDateArray: [Foundation.Date]
+  @_Concurrency.MainActor(unsafe) public var allowsMultipleSelection: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var yearsArray: [Any]
+  @_Concurrency.MainActor(unsafe) public var selectedYearIndex: Swift.Int!
+  @_Concurrency.MainActor(unsafe) public var selDate: Foundation.Date
+  @_Concurrency.MainActor(unsafe) public var cLocale: Swift.String
+  @_Concurrency.MainActor(unsafe) weak public var dtCalendarActionDelegate: DTCCalendar.DTCalendarActionDelegate?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) public func setUpView()
+  @_Concurrency.MainActor(unsafe) public func checknextPreEnable()
+  @_Concurrency.MainActor(unsafe) public func setHeaderDate()
+  @_Concurrency.MainActor(unsafe) public func closeView()
+  @_Concurrency.MainActor(unsafe) @objc public func calendar(_ calendar: DTCCalendar_Private.DTCalendar, boundingRectWillChange bounds: CoreGraphics.CGRect, animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc public func calendar(_ calendar: DTCCalendar_Private.DTCalendar, didSelect date: Foundation.Date, at monthPosition: DTCCalendar_Private.DTCalendarMonthPosition)
+  @_Concurrency.MainActor(unsafe) @objc public func calendarCurrentPageDidChange(_ calendar: DTCCalendar_Private.DTCalendar)
+  @_Concurrency.MainActor(unsafe) @objc public func maximumDate(for calendar: DTCCalendar_Private.DTCalendar) -> Foundation.Date
+  @_Concurrency.MainActor(unsafe) @objc public func minimumDate(for calendar: DTCCalendar_Private.DTCalendar) -> Foundation.Date
+  @_Concurrency.MainActor(unsafe) public func setPickerData()
+  @_Concurrency.MainActor(unsafe) @objc public func numberOfComponents(in pickerView: UIKit.UIPickerView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc public func pickerView(_ pickerView: UIKit.UIPickerView, numberOfRowsInComponent component: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc public func pickerView(_ pickerView: UIKit.UIPickerView, titleForRow row: Swift.Int, forComponent component: Swift.Int) -> Swift.String?
+  @_Concurrency.MainActor(unsafe) @objc public func pickerView(_ pickerView: UIKit.UIPickerView, didSelectRow row: Swift.Int, inComponent component: Swift.Int)
+  @_Concurrency.MainActor(unsafe) public func setDateOfYearPicker()
+  @objc deinit
+}
+extension DTCCalendar.OpenCalendarView : DTCCalendar_Private.DTCalendarDelegateAppearance {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func calendar(_ calendar: DTCCalendar_Private.DTCalendar, appearance: DTCCalendar_Private.DTCalendarAppearance, eventDefaultColorsFor date: Foundation.Date) -> [UIKit.UIColor]?
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func calendar(_ calendar: DTCCalendar_Private.DTCalendar, numberOfEventsFor date: Foundation.Date) -> Swift.Int
+}
